@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react'
-
+import profileImg from '../assets/logo1.jpg';
 const roles = [
   'Front-End Developer',
   'React Developer',
@@ -140,7 +140,7 @@ function Hero() {
 
   <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-primary/30 shadow-2xl sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96">
     <img
-      src="src/assets/logo1.jpg"
+src={profileImg}
       alt="Dania Ibesh"
       className="h-full w-full object-cover"
     />
