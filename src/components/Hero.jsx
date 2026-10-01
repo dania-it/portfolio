@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react'
-import profileImg from '../assets/logo1.jpg';
+import profileImg from '..//assets/projects/logo1.jpg';
 const roles = [
   'Front-End Developer',
   'React Developer',
