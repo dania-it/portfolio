@@ -6,7 +6,7 @@ import Projects from './/components/Projects'
 import Experience from './/components/Experience'
 import Contact from './/components/Contact'
 import Footer from './/components/Footer'
-import ErrorBoundary from './/components/ErrorBoundary'
+import ErrorBoundary from './/components/Errorboundary'
 import './App.css'
 
 function App() {
