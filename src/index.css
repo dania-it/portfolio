@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Main Colors */
+  --color-bg: #0b0914;
+  --color-surface: #121020;
+  --color-surface-soft: #19152b;
+  --color-border: #2a2442;
+
+  --color-text: #f4f1fb;
+  --color-muted: #9992ad;
+
+  /* Purple */
+  --color-primary: #8b5cf6;
+  --color-secondary: #a855f7;
+}
+
+/* =========================================
+   Light Mode
+========================================= */
+
+.light {
+  --color-bg: #faf9ff;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f4f0ff;
+  --color-border: #e5def5;
+
+  --color-text: #171322;
+  --color-muted: #716b7d;
+
+  --color-primary: #7c3aed;
+  --color-secondary: #9333ea;
+}
+
+/* =========================================
+   Global
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================================
+   Selection
+========================================= */
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* =========================================
+   Focus
+========================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Scrollbar
+========================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+/* =========================================
+   Purple Gradient
+========================================= */
+
+.text-gradient {
+  background-image: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #a855f7,
+    #d946ef
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gradient-brand {
+  background-image: linear-gradient(
+    90deg,
+    #7c3aed,
+    #8b5cf6,
+    #c026d3
+  );
+}
+
+/* =========================================
+   Navbar Hover
+========================================= */
+
+.nav-link {
+  position: relative;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+
+  width: 0;
+  height: 1.5px;
+
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #d946ef
+  );
+
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text);
+}
+
+.nav-link:hover::after {
+  width: 55%;
+}
+
+/* =========================================
+   Theme Button
+========================================= */
+
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: rotate(8deg);
+}
+button,
+a {
+  cursor: pointer;
+}
+/* =========================================
+   Elegant Hover Border
+========================================= */
+
+.glow-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.glow-border {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* Moving purple-white line */
+.glow-border::before {
+  content: "";
+  position: absolute;
+
+  width: 70px;
+  height: 2px;
+
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ffffff,
+    #a855f7,
+    #7c3aed
+  );
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 0 8px rgba(139, 92, 246, 0.8),
+    0 0 16px rgba(139, 92, 246, 0.35);
+
+  offset-path: inset(0 round 16px);
+  offset-distance: 0%;
+  animation: borderWorm 4.5s linear infinite;
+}
+
+.glow-card:hover .glow-border {
+  opacity: 1;
+}
+
+@keyframes borderWorm {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/* =========================================
+   Active Nav Link (scrollspy)
+========================================= */
+
+.nav-link-active {
+  color: var(--color-text) !important;
+}
+
+.nav-link-active::after {
+  width: 55% !important;
+}
+/* =========================================
+   Reduced Motion
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+@keyframes borderRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
