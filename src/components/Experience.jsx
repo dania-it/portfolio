@@ -1,20 +1,28 @@
 const timeline = [
   {
+    when: 'Oct 2026',
+    title: 'JavaScript Basics',
+    org: 'Coursera — University of California, Davis',
+    tags: ['JavaScript'],
+    detail:
+      'Completed a certified course covering core JavaScript fundamentals: syntax, functions, control flow, and working with data in the browser.',
+  },
+  {
     when: '2026',
     title: 'Front-End Web Development Training',
     org: 'Al-Baraka Association',
-tags: ['HTML', 'CSS', 'Bootstrap', 'Tailwind CSS', 'JavaScript', 'React.js', 'Node.js Basics'],
+    tags: ['HTML', 'CSS', 'Bootstrap', 'Tailwind CSS', 'JavaScript', 'React.js', 'Node.js Basics'],
     detail:
       'Practical training in modern front-end development, including responsive interfaces, React applications, and basic Node.js usage, along with professional work ethics.',
   },
-{
-  when: '2026',
-  title: 'UX & Interaction Design Track',
-  org: 'Edraak',
-  tags: ['UX Design', 'UX Research', 'Interaction Design'],
-  detail:
-    'Completed training in UX design, UX research, and interaction design, and applied user-centered principles and interaction patterns to front-end layouts.',
-},
+  {
+    when: '2026',
+    title: 'UX & Interaction Design Track',
+    org: 'Edraak',
+    tags: ['UX Design', 'UX Research', 'Interaction Design'],
+    detail:
+      'Completed training in UX design, UX research, and interaction design, and applied user-centered principles and interaction patterns to front-end layouts.',
+  },
   {
     when: 'Jan 2026',
     title: 'Graduated — Technical Institute for Computer Science',
@@ -22,9 +30,7 @@ tags: ['HTML', 'CSS', 'Bootstrap', 'Tailwind CSS', 'JavaScript', 'React.js', 'No
     tags: ['Computer Science'],
     detail:
       'Completed technical studies in computer science with a focus on software development and programming fundamentals.',
-  }
-
-
+  },
 ]
 
 function Experience() {
@@ -35,7 +41,6 @@ function Experience() {
     >
       <div className="mx-auto max-w-5xl">
 
-        {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="font-mono text-sm uppercase tracking-[0.25em] text-secondary">
             Journey
@@ -54,10 +59,8 @@ function Experience() {
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="relative mt-20">
 
-          {/* Vertical Line */}
           <div
             className="
               absolute
@@ -88,7 +91,6 @@ function Experience() {
                 "
               >
 
-                {/* Date */}
                 <div
                   className="
                     pl-12
@@ -109,7 +111,6 @@ function Experience() {
                   </span>
                 </div>
 
-                {/* Timeline Point */}
                 <div
                   className="
                     absolute
@@ -138,9 +139,10 @@ function Experience() {
                   />
                 </div>
 
-                {/* Content Card */}
+               
                 <div
-className="glow-card relative rounded-2xl"                >
+                  className="glow-card relative rounded-2xl"
+                >
                   <span className="glow-border" />
 
                   <div
@@ -158,7 +160,6 @@ className="glow-card relative rounded-2xl"                >
                     "
                   >
 
-                  {/* Title */}
                   <h3
                     className="
                       text-lg
@@ -171,12 +172,10 @@ className="glow-card relative rounded-2xl"                >
                     {item.title}
                   </h3>
 
-                  {/* Organization */}
                   <p className="mt-2 text-sm font-medium text-secondary">
                     {item.org}
                   </p>
 
-                  {/* Description */}
                   <p
                     className="
                       mt-4
@@ -190,7 +189,6 @@ className="glow-card relative rounded-2xl"                >
                     {item.detail}
                   </p>
 
-                  {/* Tags */}
                   <div className="mt-5 flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span

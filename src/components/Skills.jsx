@@ -7,7 +7,7 @@ const groups = [
     bars: [
       { name: 'HTML5', level: 93 },
       { name: 'CSS3', level: 85 },
-      { name: 'JavaScript', level: 70 },
+      { name: 'JavaScript', level: 65 },
       { name: 'React.js', level: 70 },
     ],
   },
@@ -15,6 +15,7 @@ const groups = [
     label: 'React & Libraries',
     description: 'Structuring real apps: routing, forms, and validation.',
     bars: [
+      { name: 'TypeScript', level:55 },
       { name: 'Tailwind CSS', level: 73 },
       { name: 'React Router', level: 70 },
       { name: 'React Hook Form', level: 70 },
@@ -25,10 +26,10 @@ const groups = [
     label: 'Backend & Tools',
     description: 'The data layer and workflow tools around the UI.',
     bars: [
-      { name: 'SQL', level: 68 },
-      { name: 'C#', level: 65 },
-      { name: 'Git', level: 78 },
-      { name: 'GitHub', level: 80 },
+      { name: 'SQL', level: 50 },
+      { name: 'C#', level: 45 },
+      { name: 'Git', level: 73 },
+      { name: 'GitHub', level: 78 },
     ],
   },
 ]
