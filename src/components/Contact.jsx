@@ -66,7 +66,7 @@ function Contact() {
 
     const subject = encodeURIComponent(form.subject || "Portfolio contact");
 
-    window.location.href = `mailto:daniaibesh513@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:daniaibesh51@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
