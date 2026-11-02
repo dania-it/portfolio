@@ -109,7 +109,7 @@ function Skills() {
           </p>
         </div>
 
-        {/* Skills Groups */}
+       
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           {groups.map((group) => (
             <div
