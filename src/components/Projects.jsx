@@ -55,10 +55,11 @@ const projects = [
     stack: [
       'React.js',
       'CSS',
+      'TypeScript',
     ],
 
     summary:
-      'A lightweight, interactive quiz application built with React.js. Features reusable components for displaying questions and answers, light and dark mode, and a custom-styled interface.',
+      'A lightweight, interactive quiz application built with React.js and TypeScript. Originally developed in JavaScript and later migrated to TypeScript to improve type safety and code maintainability. Features reusable components for displaying questions and answers, light and dark modes, and a custom-styled interface.',
 
     demo: 'https://simple-quiz-en56.onrender.com/',
 
